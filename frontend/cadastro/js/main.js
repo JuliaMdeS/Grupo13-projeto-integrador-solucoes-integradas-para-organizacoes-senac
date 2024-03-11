@@ -121,9 +121,12 @@
             type: 'POST',
             data: JSON.stringify(registerData),
             contentType: "application/json",
-            success: function(response) {
+            success: function(response, status, xhr) {
                 console.log("User registered");
-                loginUser(response.idUsuario, registerData);
+                var locationHeader = xhr.getResponseHeader('Location');
+                console.log("Created user location: ", locationHeader);
+                var idUsuario = locationHeader.split('/').pop();
+                loginUser(idUsuario, registerData);
             },
             error: function(error) {
                 console.error("Registration failed", error);
