@@ -14,12 +14,14 @@ import java.util.Date;
 @NoArgsConstructor
 @Embeddable
 public class FichaMedica {
+    private Double peso;
     private String tipoSanguineo;
     private Boolean possuiTatuagens;
     private Date ultimaDoacao;
     private String doencasPreexistentes;
 
     public FichaMedica(FichaMedicaDTO dto) {
+        this.peso = dto.peso();
         this.tipoSanguineo = dto.tipoSanguineo();
         this.possuiTatuagens = dto.possuiTatuagens();
         this.ultimaDoacao = dto.ultimaDoacao();
@@ -27,7 +29,9 @@ public class FichaMedica {
     }
 
     public void update(UpdateFichaMedicaDTO dto) {
+        if (dto.peso() != null) this.peso = dto.peso();
+        if (dto.possuiTatuagens() != null) this.possuiTatuagens = dto.possuiTatuagens();
         if (dto.ultimaDoacao() != null) this.ultimaDoacao = dto.ultimaDoacao();
-        if (dto.jaDoou() != null) this.possuiTatuagens = dto.jaDoou();
+        if (dto.doencasPreexistentes() != null) this.doencasPreexistentes = dto.doencasPreexistentes();
     }
 }

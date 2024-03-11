@@ -6,9 +6,9 @@ import com.hemoclick.api.model.Usuario;
 
 import java.util.Date;
 
-public record ResponseDoadorDTO(Long idUsuario, Long id, String nome, String cpf, String telefone, Date dataNascimento, String sexo, Double peso,
+public record ResponseDoadorDTO(Long idUsuario, Long id, String nome, String cpf, String telefone, Date dataNascimento, String sexo,
                                 FichaMedica fichaMedica) {
     public ResponseDoadorDTO(Doador doador) {
-        this(doador.getUsuario().getId(), doador.getId(), doador.getNome(), doador.getCpf(), doador.getTelefone(), doador.getDataNascimento(), doador.getSexo(), doador.getPeso(), doador.getFichaMedica());
+        this(doador.getUsuario().getId(), doador.getId(), doador.getNome(), doador.getCpf(), doador.getTelefone(), doador.getDataNascimento(), doador.getSexo(), doador.getFichaMedica());
     }
 }

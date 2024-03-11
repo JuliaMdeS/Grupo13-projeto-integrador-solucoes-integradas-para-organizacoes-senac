@@ -26,7 +26,6 @@ public class Doador {
     private String cep;
     private String endereco;
     private String telefone;
-    private Double peso;
     @Embedded
     private FichaMedica fichaMedica;
     @OneToOne(fetch = FetchType.LAZY)
@@ -41,13 +40,13 @@ public class Doador {
         this.endereco = dto.endereco();
         this.cep = dto.cep();
         this.telefone = dto.telefone();
-        this.peso = dto.peso();
         this.fichaMedica = new FichaMedica(dto.fichaMedica());
     }
 
     public void update(UpdateDoadorDTO dto) {
         if (dto.cep() != null) this.cep = dto.cep();
-        if (dto.peso() != null) this.peso = dto.peso();
+        if (dto.endereco() != null) this.endereco = dto.endereco();
+        if (dto.telefone() != null) this.telefone = dto.telefone();
         if (dto.fichaMedica() != null) this.fichaMedica.update(dto.fichaMedica());
     }
 }
