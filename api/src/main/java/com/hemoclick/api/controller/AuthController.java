@@ -1,7 +1,6 @@
 package com.hemoclick.api.controller;
 
 import com.hemoclick.api.dto.auth.AuthDTO;
-import com.hemoclick.api.dto.auth.ResponseAuthDTO;
 import com.hemoclick.api.dto.auth.TokenDTO;
 import com.hemoclick.api.model.Usuario;
 import com.hemoclick.api.security.JWTService;
@@ -28,10 +27,10 @@ public class AuthController {
     private final UserAuthService userAuthService;
 
     @PostMapping("/register")
-    protected ResponseEntity<ResponseAuthDTO> register(@RequestBody @Valid AuthDTO dto, UriComponentsBuilder uriBuilder) {
+    protected ResponseEntity register(@RequestBody @Valid AuthDTO dto, UriComponentsBuilder uriBuilder) {
         var user = userAuthService.registerUserAuth(dto);
         var uri = uriBuilder.path("api/user/{id}").buildAndExpand(user.getId()).toUri();
-        return ResponseEntity.created(uri).body(new ResponseAuthDTO(Long.toString(user.getId()), user.getUsername()));
+        return ResponseEntity.created(uri).build();
     }
 
     @PostMapping("/login")
