@@ -24,10 +24,12 @@ public class Doador {
     private Date dataNascimento;
     private String sexo;
     private String cep;
+    private String endereco;
+    private String telefone;
     private Double peso;
     @Embedded
     private FichaMedica fichaMedica;
-    @ManyToOne
+    @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "usuarios_id")
     private Usuario usuario;
 
@@ -36,7 +38,9 @@ public class Doador {
         this.cpf = dto.cpf();
         this.dataNascimento = dto.dataNascimento();
         this.sexo = dto.sexo();
+        this.endereco = dto.endereco();
         this.cep = dto.cep();
+        this.telefone = dto.telefone();
         this.peso = dto.peso();
         this.fichaMedica = new FichaMedica(dto.fichaMedica());
     }

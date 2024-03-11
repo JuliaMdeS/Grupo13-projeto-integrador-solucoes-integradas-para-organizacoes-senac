@@ -30,4 +30,8 @@ public class UserAuthService implements UserDetailsService {
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         return userAuthRepository.findByUsername(username);
     }
+
+    public Usuario buscarUsuario(Long id) {
+        return userAuthRepository.getReferenceById(id);
+    }
 }

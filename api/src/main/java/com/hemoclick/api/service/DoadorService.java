@@ -16,10 +16,13 @@ import org.springframework.stereotype.Service;
 public class DoadorService {
 
     private final DoadorRepository doadorRepository;
+    private final UserAuthService userAuthService;
 
     @Transactional
     public Doador criarDoador(RequestDoadorDTO dto) {
+        var usuario = userAuthService.buscarUsuario(dto.idUsuario());
         var doador = new Doador(dto);
+        doador.setUsuario(usuario);
         return doadorRepository.save(doador);
     }
 

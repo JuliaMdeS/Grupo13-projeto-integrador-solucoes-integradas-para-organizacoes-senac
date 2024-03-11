@@ -15,17 +15,19 @@ import java.util.Date;
 @Embeddable
 public class FichaMedica {
     private String tipoSanguineo;
-    private Boolean jaDoou;
+    private Boolean possuiTatuagens;
     private Date ultimaDoacao;
+    private String doencasPreexistentes;
 
     public FichaMedica(FichaMedicaDTO dto) {
         this.tipoSanguineo = dto.tipoSanguineo();
-        this.jaDoou = dto.jaDoou();
+        this.possuiTatuagens = dto.possuiTatuagens();
         this.ultimaDoacao = dto.ultimaDoacao();
+        this.doencasPreexistentes = dto.doencasPreexistentes();
     }
 
     public void update(UpdateFichaMedicaDTO dto) {
         if (dto.ultimaDoacao() != null) this.ultimaDoacao = dto.ultimaDoacao();
-        if (dto.jaDoou() != null) this.jaDoou = dto.jaDoou();
+        if (dto.jaDoou() != null) this.possuiTatuagens = dto.jaDoou();
     }
 }
