@@ -15,6 +15,8 @@ Prof. Gustavo Calixto
 
 Na segunda etapa do projeto integrador, revisitamos a ideia originalmente proposta e decidimos implementar o fluxo de login/cadsatro de um doador do app Hemo Click.
 
+As telas de login e cadastro do Hemo Click haviam sido primeiramente projetadas para uma aplicação mobile, entretanto, ao revisitar a ideia proposta, decidimos seguir com a implementação das telas no formato Web devido a familiaridade dos integrantes com a tecnologia.
+
 ## Ambiente de desenvolvimento
 
 ### Frontend
