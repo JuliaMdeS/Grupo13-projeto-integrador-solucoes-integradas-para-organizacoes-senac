@@ -6,10 +6,10 @@ Segunda Etapa
 Prof. Gustavo Calixto
 
 ## Integrantes
-- Johnatan
-- Júlia
-- Luan
-- Lucas
+- Johnatan Bandeira de Souza
+- Júlia Magalhães de Sant'Anna
+- Luan Silva Fulnazari de Souza
+- Lucas Da Silva Gonçalves
 
 ## Revisitar Projeto e definir a prova de conceito
 
