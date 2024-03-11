@@ -78,29 +78,25 @@
     $('#registrationForm').on('submit', function(event) {
         var check = true;
 
-        // Check if the user has not donated before
         var hasDonated = $('input[name="jaDoou"]:checked').val() === 'yes';
     
         input.each(function(){
-            // Skip validation for lastDonationDateField if hasDonated is false
             if (!hasDonated && $(this).attr('name') === 'lastdonationdate') {
-                return true; // Equivalent to 'continue' in a regular loop
+                return true;
             }
             if(validate(this) == false){
                 showValidate(this);
-                check = false; // If any validation fails, set check to false
+                check = false;
             }
         });
 
-        // Prevent form submission by default if validation fails
         if(!check) {
             console.log("Form check didn't pass")
             event.preventDefault();
-            return; // Stop execution if the form is not valid
+            return;
         }
         
-        // If the code reaches here, it means validation passed
-        event.preventDefault(); // Still prevent the default submit
+        event.preventDefault();
 
         var registerData = {
             username: $('input[name="email"]').val(),
@@ -116,7 +112,6 @@
                 peso: parseFloat($('input[name="weight"]').val()),
                 possuiTatuagens:  $('input[name="tattoo"]:checked').val() === 'yes',
                 tipoSanguineo: $('input[name="bloodtype"]').val(),
-                //jaDoou: $('input[name="jaDoou"]:checked').val() === 'yes',
                 ultimaDoacao: $('input[name="jaDoou"]:checked').val() === 'yes' ? $('input[name="lastdonationdate"]').val() + "T09:30:00.000" : null            },
         };
 
@@ -128,7 +123,6 @@
             contentType: "application/json",
             success: function(response) {
                 console.log("User registered");
-                // log in
                 loginUser(response.idUsuario, registerData);
             },
             error: function(error) {
