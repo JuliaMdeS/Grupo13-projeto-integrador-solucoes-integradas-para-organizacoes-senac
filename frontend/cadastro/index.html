@@ -91,18 +91,35 @@
                         <span class="focus-input100" data-symbol="&#xf206;"></span>
                     </div>
 
-                    <div class="wrap-input100 validate-input m-b-23" data-validate = "Tipo Sanguíneo é obrigatório">
+                    <!-- <div class="wrap-input100 validate-input m-b-23" data-validate = "Tipo Sanguíneo é obrigatório">
                         <span class="label-input100">Tipo Sanguíneo</span>
                         <input class="input100" type="text" name="bloodtype" placeholder="Tipo Sanguíneo">
                         <span class="focus-input100" data-symbol="&#xf206;"></span>
-                    </div>
+                    </div> -->
 
-                    <div class="wrap-input100 validate-input m-b-23" data-validate = "Peso é obrigatório">
-                        <span class="label-input100">Peso (kg)</span>
-                        <input class="input100" type="text" name="weight" placeholder="Peso">
+                    <div class="wrap-input100 validate-input m-b-23" data-validate="Tipo Sanguíneo é obrigatório">
+                        <label for="bloodtype" class="label-input100">Tipo Sanguíneo</label>
+                        <select class="input100" name="bloodtype" id="bloodtype">
+                            <option value="" disabled selected>Selecione o tipo sanguíneo</option>
+                            <option value="A+">A+</option>
+                            <option value="A-">A-</option>
+                            <option value="B+">B+</option>
+                            <option value="B-">B-</option>
+                            <option value="AB+">AB+</option>
+                            <option value="AB-">AB-</option>
+                            <option value="O+">O+</option>
+                            <option value="O-">O-</option>
+                        </select>
                         <span class="focus-input100" data-symbol="&#xf206;"></span>
                     </div>
+                    
 
+                    <div class="wrap-input100 validate-input m-b-23" data-validate="Peso é obrigatório">
+                        <label for="weight" class="label-input100">Peso (kg)</label>
+                        <input class="input100" type="number" name="weight" id="weight" placeholder="Peso" min="0" step="1">
+                        <span class="focus-input100" data-symbol="&#xf206;"></span>
+                    </div>
+                    
                     <div class="wrap-input100 m-b-23">
                         <span class="label-input100">Já doou sangue antes?</span><br>
                         <input type="radio" id="donated_yes" name="jaDoou" value="yes">
@@ -132,7 +149,7 @@
                     </div>
                     
                     <div class="text-right p-t-8 p-b-31">
-                        <a href="#">
+                        <a href="/login/index.html">
                             Já é um doador? Faça login aqui.
                         </a>
                     </div>
