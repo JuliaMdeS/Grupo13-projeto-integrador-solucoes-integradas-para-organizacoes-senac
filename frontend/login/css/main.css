@@ -185,7 +185,7 @@ iframe {
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
-  height: 675px;
+  height: 750px;
 }
 
 
@@ -313,7 +313,10 @@ iframe {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 10px;
 }
+
+
 
 .wrap-login100-form-btn {
   width: 100%;
