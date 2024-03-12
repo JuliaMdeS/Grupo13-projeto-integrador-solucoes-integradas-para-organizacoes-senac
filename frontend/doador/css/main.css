@@ -44,8 +44,8 @@ body, html {
 
 /*---------------------------------------------*/
 a {
-	font-family: Poppins-Regular;
-	font-size: 14px;
+	font-family: Poppins-medium;
+	font-size: 16px;
 	line-height: 1.7;
 	color: #666666;
 	margin: 0px;
@@ -157,13 +157,13 @@ iframe {
 
 
 /*//////////////////////////////////////////////////////////////////
-[ login ]*/
+[ doador ]*/
 .limiter {
   width: 100%;
   margin: 0 auto;
 }
 
-.container-login100 {
+.container-doador100 {
   width: 100%;  
   min-height: 100vh;
   display: -webkit-box;
@@ -180,23 +180,23 @@ iframe {
   background-size: cover;
 }
 
-.wrap-login100 {
-  width: 1000px;
+.wrap-doador100 {
+  width: 500px;
   background: #fff;
-  border-radius: 20px;
+  border-radius: 10px;
   overflow: hidden;
-  height: 1600px;
+  height: 675px;
 }
 
 
 /*------------------------------------------------------------------
 [ Form ]*/
 
-.login100-form {
+.doador100-form {
   width: 100%;
 }
 
-.login100-form-title {
+.doador100-form-title {
   display: block;
   font-family: Poppins-Bold;
   font-size: 39px;
@@ -305,7 +305,7 @@ iframe {
 
 /*------------------------------------------------------------------
 [ Button ]*/
-.container-login100-form-btn {
+.container-doador100-form-btn {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -315,7 +315,7 @@ iframe {
   justify-content: center;
 }
 
-.wrap-login100-form-btn {
+.wrap-doador100-form-btn {
   width: 100%;
   display: block;
   position: relative;
@@ -331,7 +331,7 @@ iframe {
   -ms-box-shadow: 0 5px 30px 0px rgba(3, 216, 222, 0.2);
 }
 
-.login100-form-bgbtn {
+.doador100-form-bgbtn {
   position: absolute;
   z-index: -1;
   width: 300%;
@@ -342,7 +342,7 @@ iframe {
   background: -moz-linear-gradient(right, #00dbde, #fc00ff, #00dbde, #fc00ff);
   background: linear-gradient(right, #00dbde, #fc00ff, #00dbde, #fc00ff);
   top: 0;
-  left: -100%;
+  left: 100%;
 
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
@@ -350,10 +350,10 @@ iframe {
   transition: all 0.4s;
 }
 
-.login100-form-btn {
+.doador100-form-btn {
   font-family: Poppins-Medium;
   font-size: 16px;
-  color: #fff;
+  color: #000000;
   line-height: 1.2;
   text-transform: uppercase;
 
@@ -366,10 +366,10 @@ iframe {
   align-items: center;
   padding: 0 20px;
   width: 100%;
-  height: 50px;
+  height: 30px;
 }
 
-.wrap-login100-form-btn:hover .login100-form-bgbtn {
+.wrap-doador100-form-btn:hover .doador100-form-bgbtn {
   left: 0;
 }
 
@@ -444,7 +444,7 @@ iframe {
 
 /*//////////////////////////////////////////////////////////////////
 [ Social item ]*/
-.login100-social-item {
+.doador100-social-item {
   font-size: 25px;
   color: #fff;
 
@@ -461,7 +461,7 @@ iframe {
   margin: 5px;
 }
 
-.login100-social-item:hover {
+.doador100-social-item:hover {
   color: #fff;
   background-color: #333333;
 }
@@ -470,20 +470,20 @@ iframe {
 [ Responsive ]*/
 
 @media (max-width: 576px) {
-  .wrap-login100 {
+  .wrap-doador100 {
     padding-left: 15px;
     padding-right: 15px;
   }
 } 
 
-/*//////////////////////////////////////////////////////////////////
-[ Donor ]*/
-
-
 .donors-container {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px; /* Creates a gap between cards */
+    flex-wrap: wrap;
+    gap: 20px; 
+    max-height: 500px;  
+    overflow-y: auto; 
+    margin-bottom: 20px;  
+    padding-right: 10px;
 }
 
 .donor-card {
@@ -492,8 +492,10 @@ iframe {
   border-radius: 8px;
   padding: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: calc(33.333% - 20px); /* Three cards per row, accounting for gap */
+  width: calc(33.333% - 20px); 
   box-sizing: border-box;
+  width: calc(33.333% - 20px); 
+  margin-bottom: 20px;
 }
 
 .donor-card h4 {

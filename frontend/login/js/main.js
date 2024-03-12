@@ -65,7 +65,52 @@
 
         $(thisAlert).removeClass('alert-validate');
     }
-    
-    
 
+      /*========================== AJAX REGISTER USER ==========================*/
+      $('#loginForm').on('submit', function(event) {
+        var check = true;
+
+        var hasDonated = $('input[name="jaDoou"]:checked').val() === 'yes';
+    
+        input.each(function(){
+            if (!hasDonated && $(this).attr('name') === 'lastdonationdate') {
+                return true;
+            }
+            if(validate(this) == false){
+                showValidate(this);
+                check = false;
+            }
+        });
+
+        if(!check) {
+            console.log("Form check didn't pass")
+            event.preventDefault();
+            return;
+        }
+        
+        event.preventDefault();
+
+        var loginData = {
+            username: $('input[name="username"]').val(),
+            password: $('input[name="pass"]').val(),
+        };
+
+        //Register user
+        $.ajax({
+            url: 'http://localhost:8081/api/user/login',
+            type: 'POST',
+            data: JSON.stringify(loginData),
+            contentType: "application/json",
+            success: function(response, status, xhr) {
+                console.log("User Logged in");
+                var tokenJWT = response.tokenJWT;
+                console.log("Token JWT", tokenJWT);
+                sessionStorage.setItem('jwtToken', tokenJWT);
+                window.location.href = 'http://localhost:8080/doador/';
+            },
+            error: function(error) {
+                console.error("Registration failed", error);
+            }
+        });
+    });
 })(jQuery);

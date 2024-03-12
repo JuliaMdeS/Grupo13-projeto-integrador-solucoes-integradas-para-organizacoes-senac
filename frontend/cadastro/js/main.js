@@ -115,7 +115,7 @@
                 ultimaDoacao: $('input[name="jaDoou"]:checked').val() === 'yes' ? $('input[name="lastdonationdate"]').val() + "T09:30:00.000" : null            },
         };
 
-        //Register the user
+        //Register user
         $.ajax({
             url: 'http://localhost:8081/api/user/register',
             type: 'POST',
@@ -172,6 +172,8 @@
             },
             success: function(response) {
                 console.log("Donor created successfully", response);
+                sessionStorage.setItem('jwtToken', tokenJWT);
+                window.location.href = 'http://localhost:8080/doador/';
             },
             error: function(error) {
                 console.error("Failed to create donor", error);

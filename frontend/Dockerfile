@@ -9,3 +9,6 @@ COPY ./cadastro/ /usr/share/nginx/html/cadastro/
 
 # Copie todos os arquivos da pasta login para o contêiner
 COPY ./login/ /usr/share/nginx/html/login/
+
+# Copie todos os arquivos da pasta doador para o contêiner
+COPY ./doador/ /usr/share/nginx/html/doador/
