@@ -71,13 +71,13 @@
                         <span class="focus-input100" data-symbol="&#xf206;"></span>
                     </div>
 
-                    <div class="wrap-input100 m-b-23">
+                    <div class="wrap-input100 m-b-23" data-validate="Selecione o sexo">
                         <span class="label-input100">Qual é o seu sexo?</span><br>
-                        <input type="radio" id="gender_male" name="gender" value="male">
+                        <input type="radio" id="gender_male" name="gender" value="male" required>
                         <label for="gender_male">Masculino</label>
-                        <input type="radio" id="gender_female" name="gender" value="female">
+                        <input type="radio" id="gender_female" name="gender" value="female" required>
                         <label for="gender_female">Feminino</label>
-                    </div>
+                    </div>                    
 
                     <div class="wrap-input100 validate-input m-b-23" data-validate = "CEP é obrigatório">
                         <span class="label-input100">CEP</span>
@@ -91,15 +91,9 @@
                         <span class="focus-input100" data-symbol="&#xf206;"></span>
                     </div>
 
-                    <!-- <div class="wrap-input100 validate-input m-b-23" data-validate = "Tipo Sanguíneo é obrigatório">
-                        <span class="label-input100">Tipo Sanguíneo</span>
-                        <input class="input100" type="text" name="bloodtype" placeholder="Tipo Sanguíneo">
-                        <span class="focus-input100" data-symbol="&#xf206;"></span>
-                    </div> -->
-
-                    <div class="wrap-input100 validate-input m-b-23" data-validate="Tipo Sanguíneo é obrigatório">
+                    <div class="wrap-input100 m-b-23" data-validate="Selecione o tipo sanguíneo">
                         <label for="bloodtype" class="label-input100">Tipo Sanguíneo</label>
-                        <select class="input100" name="bloodtype" id="bloodtype">
+                        <select class="input100" name="bloodtype" id="bloodtype" required>
                             <option value="" disabled selected>Selecione o tipo sanguíneo</option>
                             <option value="A+">A+</option>
                             <option value="A-">A-</option>
@@ -113,18 +107,17 @@
                         <span class="focus-input100" data-symbol="&#xf206;"></span>
                     </div>
                     
-
                     <div class="wrap-input100 validate-input m-b-23" data-validate="Peso é obrigatório">
                         <label for="weight" class="label-input100">Peso (kg)</label>
                         <input class="input100" type="number" name="weight" id="weight" placeholder="Peso" min="0" step="1">
                         <span class="focus-input100" data-symbol="&#xf206;"></span>
                     </div>
                     
-                    <div class="wrap-input100 m-b-23">
+                    <div class="wrap-input100 m-b-23" data-validate="Selecione se já doou sangue antes">
                         <span class="label-input100">Já doou sangue antes?</span><br>
-                        <input type="radio" id="donated_yes" name="jaDoou" value="yes">
+                        <input type="radio" id="donated_yes" name="jaDoou" value="yes" required>
                         <label for="donated_yes">Sim</label>
-                        <input type="radio" id="donated_no" name="jaDoou" value="no">
+                        <input type="radio" id="donated_no" name="jaDoou" value="no" required>
                         <label for="donated_no">Não</label>
                     </div>
 
@@ -134,17 +127,17 @@
                         <span class="focus-input100" data-symbol="&#xf206;"></span>
                     </div>
 
-                    <div class="wrap-input100 validate-input m-b-23" data-validate = "Informe se possui alguma doença pré-existente">
+                    <div class="wrap-input100 m-b-23">
                         <span class="label-input100">Doenças Pré-existentes</span>
                         <input class="input100" type="text" name="preexistingconditions" placeholder="Doenças Pré-existentes">
                         <span class="focus-input100" data-symbol="&#xf206;"></span>
                     </div>
 
-                    <div class="wrap-input100 m-b-23">
+                    <div class="wrap-input100 m-b-23" data-validate="Selecione se possui tatuagens">
                         <span class="label-input100">Possui tatuagens?</span><br>
-                        <input type="radio" id="tattoo_yes" name="tattoo" value="yes">
+                        <input type="radio" id="tattoo_yes" name="tattoo" value="yes" required>
                         <label for="tattoo_yes">Sim</label>
-                        <input type="radio" id="tattoo_no" name="tattoo" value="no">
+                        <input type="radio" id="tattoo_no" name="tattoo" value="no" required>
                         <label for="tattoo_no">Não</label>
                     </div>
                     
