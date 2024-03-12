@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>HemoClick - Cadastro de Doador</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--===============================================================================================-->    
-    <link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
     <!--===============================================================================================-->
@@ -14,58 +15,61 @@
     <link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-    <!--===============================================================================================-->    
+    <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-    <!--===============================================================================================-->    
+    <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="css/util.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <!--===============================================================================================-->
 </head>
+
 <body>
-        <div class="limiter">
+    <div class="limiter">
         <div class="container-login100" style="background-image: url('images/bg-01.jpg');">
             <div class="wrap-login100 p-l-55 p-r-55 p-t-20 p-b-24">
                 <form class="login100-form validate-form" id="registrationForm">
-                    <center><img src="images/logo.png" width="100px"></center>                  
+                    <center><img src="images/logo.png" width="100px"></center>
                     <span class="login100-form-title p-b-49">
                         Cadastro de Doador
                     </span>
-                    <div class="wrap-input100 validate-input m-b-23" data-validate = "Nome é obrigatório">
+
+                    <div class="wrap-input100 validate-input m-b-23" data-validate="Nome é obrigatório">
                         <span class="label-input100">Nome Completo</span>
                         <input class="input100" type="text" name="fullname" placeholder="Nome Completo">
                         <span class="focus-input100" data-symbol="&#xf206;"></span>
                     </div>
-                    <div class="wrap-input100 validate-input m-b-23" data-validate = "CPF é obrigatório">
+
+                    <div class="wrap-input100 validate-input m-b-23" data-validate="CPF é obrigatório">
                         <span class="label-input100">CPF</span>
-                        <input class="input100" type="text" name="cpf" placeholder="CPF">
+                        <input class="input100" type="text" name="cpf" id="cpfInput" placeholder="CPF">
                         <span class="focus-input100" data-symbol="&#xf206;"></span>
                     </div>
 
-                    <div class="wrap-input100 validate-input m-b-23" data-validate = "E-mail é obrigatório">
+                    <div class="wrap-input100 validate-input m-b-23" data-validate="E-mail é obrigatório">
                         <span class="label-input100">E-mail</span>
                         <input class="input100" type="email" name="email" placeholder="E-mail">
                         <span class="focus-input100" data-symbol="&#xf206;"></span>
                     </div>
 
-                    <div class="wrap-input100 validate-input m-b-23" data-validate = "Senha é obrigatório">
+                    <div class="wrap-input100 validate-input m-b-23" data-validate="Senha é obrigatório">
                         <span class="label-input100">Senha</span>
                         <input class="input100" type="password" name="senha" placeholder="Senha">
                         <span class="focus-input100" data-symbol="&#xf206;"></span>
                     </div>
 
-                    <div class="wrap-input100 validate-input m-b-23" data-validate = "Telefone é obrigatório">
+                    <div class="wrap-input100 validate-input m-b-23" data-validate="Telefone é obrigatório">
                         <span class="label-input100">Telefone</span>
-                        <input class="input100" type="text" name="phone" placeholder="Telefone">
+                        <input class="input100" type="text" name="phone" id="phoneInput" placeholder="Telefone">
                         <span class="focus-input100" data-symbol="&#xf206;"></span>
                     </div>
 
-                    <div class="wrap-input100 validate-input m-b-23" data-validate = "Data de Nascimento é obrigatória">
+                    <div class="wrap-input100 validate-input m-b-23" data-validate="Data de Nascimento é obrigatória">
                         <span class="label-input100">Data de Nascimento</span>
                         <input class="input100" type="date" name="birthdate">
                         <span class="focus-input100" data-symbol="&#xf206;"></span>
@@ -77,15 +81,15 @@
                         <label for="gender_male">Masculino</label>
                         <input type="radio" id="gender_female" name="gender" value="female" required>
                         <label for="gender_female">Feminino</label>
-                    </div>                    
+                    </div>
 
-                    <div class="wrap-input100 validate-input m-b-23" data-validate = "CEP é obrigatório">
+                    <div class="wrap-input100 validate-input m-b-23" data-validate="CEP é obrigatório">
                         <span class="label-input100">CEP</span>
-                        <input class="input100" type="text" name="cep" placeholder="CEP">
+                        <input class="input100" type="text" name="cep" id="cepInput" placeholder="CEP">
                         <span class="focus-input100" data-symbol="&#xf206;"></span>
                     </div>
 
-                    <div class="wrap-input100 validate-input m-b-23" data-validate = "Endereço é obrigatório">
+                    <div class="wrap-input100 validate-input m-b-23" data-validate="Endereço é obrigatório">
                         <span class="label-input100">Endereço</span>
                         <input class="input100" type="text" name="address" placeholder="Endereço">
                         <span class="focus-input100" data-symbol="&#xf206;"></span>
@@ -106,13 +110,14 @@
                         </select>
                         <span class="focus-input100" data-symbol="&#xf206;"></span>
                     </div>
-                    
+
                     <div class="wrap-input100 validate-input m-b-23" data-validate="Peso é obrigatório">
                         <label for="weight" class="label-input100">Peso (kg)</label>
-                        <input class="input100" type="number" name="weight" id="weight" placeholder="Peso" min="0" step="1">
+                        <input class="input100" type="number" name="weight" id="weight" placeholder="Peso" min="0"
+                            step="1">
                         <span class="focus-input100" data-symbol="&#xf206;"></span>
                     </div>
-                    
+
                     <div class="wrap-input100 m-b-23" data-validate="Selecione se já doou sangue antes">
                         <span class="label-input100">Já doou sangue antes?</span><br>
                         <input type="radio" id="donated_yes" name="jaDoou" value="yes" required>
@@ -121,7 +126,8 @@
                         <label for="donated_no">Não</label>
                     </div>
 
-                    <div class="wrap-input100 validate-input m-b-23" data-validate = "Data da última doação é obrigatória" id="lastDonationDateField" style="display: none;">
+                    <div class="wrap-input100 validate-input m-b-23" data-validate="Data da última doação é obrigatória"
+                        id="lastDonationDateField" style="display: none;">
                         <span class="label-input100">Data da Última Doação</span>
                         <input class="input100" type="date" name="lastdonationdate">
                         <span class="focus-input100" data-symbol="&#xf206;"></span>
@@ -129,7 +135,8 @@
 
                     <div class="wrap-input100 m-b-23">
                         <span class="label-input100">Doenças Pré-existentes</span>
-                        <input class="input100" type="text" name="preexistingconditions" placeholder="Doenças Pré-existentes">
+                        <input class="input100" type="text" name="preexistingconditions"
+                            placeholder="Doenças Pré-existentes">
                         <span class="focus-input100" data-symbol="&#xf206;"></span>
                     </div>
 
@@ -140,13 +147,13 @@
                         <input type="radio" id="tattoo_no" name="tattoo" value="no" required>
                         <label for="tattoo_no">Não</label>
                     </div>
-                    
+
                     <div class="text-right p-t-8 p-b-31">
                         <a href="/login/index.html">
                             Já é um doador? Faça login aqui.
                         </a>
                     </div>
-                    
+
                     <div class="container-login100-form-btn">
                         <div class="wrap-login100-form-btn">
                             <div class="login100-form-bgbtn"></div>
@@ -160,10 +167,9 @@
             </div>
         </div>
     </div>
-    
 
     <div id="dropDownSelect1"></div>
-    
+
     <!--===============================================================================================-->
     <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
     <!--===============================================================================================-->
@@ -181,5 +187,43 @@
     <!--===============================================================================================-->
     <script src="js/main.js"></script>
 
+    <script>
+        document.getElementById('phoneInput').addEventListener('input', function (event) {
+            var phoneNumber = event.target.value.replace(/\D/g, '');
+            var formattedPhoneNumber = '(' + phoneNumber.substring(0, 2);
+            if (phoneNumber.length > 2) {
+                formattedPhoneNumber += ') ' + phoneNumber.substring(2, 7);
+            }
+            if (phoneNumber.length > 6) {
+                formattedPhoneNumber += '-' + phoneNumber.substring(7, 11);
+            }
+            event.target.value = formattedPhoneNumber;
+        });
+
+        document.getElementById('cpfInput').addEventListener('input', function (event) {
+            var cpf = event.target.value.replace(/\D/g, '');
+            var formattedCPF = cpf.substring(0, 3);
+            if (cpf.length > 3) {
+                formattedCPF += '.' + cpf.substring(3, 6);
+            }
+            if (cpf.length > 6) {
+                formattedCPF += '.' + cpf.substring(6, 9);
+            }
+            if (cpf.length > 9) {
+                formattedCPF += '-' + cpf.substring(9, 11);
+            }
+            event.target.value = formattedCPF;
+        });
+
+        document.getElementById('cepInput').addEventListener('input', function (event) {
+            var cep = event.target.value.replace(/\D/g, '');
+            var formattedCEP = cep.substring(0, 5);
+            if (cep.length > 5) {
+                formattedCEP += '-' + cep.substring(5, 8);
+            }
+            event.target.value = formattedCEP;
+        });
+    </script>
 </body>
+
 </html>
