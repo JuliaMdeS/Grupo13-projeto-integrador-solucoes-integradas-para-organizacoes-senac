@@ -111,7 +111,7 @@
                 doencasPreexistentes: $('input[name="preexistingconditions"]').val(),
                 peso: parseFloat($('input[name="weight"]').val()),
                 possuiTatuagens:  $('input[name="tattoo"]:checked').val() === 'yes',
-                tipoSanguineo: $('input[name="bloodtype"]').val(),
+                tipoSanguineo: $('#bloodtype').val(),
                 ultimaDoacao: $('input[name="jaDoou"]:checked').val() === 'yes' ? $('input[name="lastdonationdate"]').val() + "T09:30:00.000" : null            },
         };
 
