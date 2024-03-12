@@ -143,8 +143,7 @@
             contentType: "application/json",
             success: function(response) {
                 console.log("Logged in successfully");
-                var tokenJWT = response.tokenJWT;
-                return tokenJWT;
+                return  response.tokenJWT;
             },
             error: function(error) {
                 console.error("Login failed", error);
