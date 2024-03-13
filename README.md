@@ -1,65 +1,93 @@
-# projeto-integrador-mobile-web-grupo27
+<p align="center" style="font-size:24px;">
+  <b>Projeto Integrador - Grupo 27 - Hemoclick 🩸</b>
+</p>
 
-Projeto Integrador
-Quarto semestre TADS e TSI
-Segunda Etapa
-Prof. Gustavo Calixto
+## Descrição
 
-## Integrantes
-- Johnatan Bandeira de Souza
-- Júlia Magalhães de Sant'Anna
-- Luan Silva Fulnazari de Souza
-- Lucas Da Silva Gonçalves
+Hemoclick é uma aplicação com objetivo principal de criar uma comunidade conectada de doadores de sangue e hemocentros, simplificando o processo de doação e aumentando a disponibilidade de sangue para aqueles que necessitam.
 
-## Revisitar Projeto e definir a prova de conceito
+### Participantes 👥
 
-Na segunda etapa do projeto integrador, revisitamos a ideia originalmente proposta e decidimos implementar o fluxo de login/cadsatro de um doador do app Hemo Click.
+- **Luan Silva Fulnazari de Souza**
+- **Jonathan Bandeira de Souza**
+- **Julia Magalhães de Sant Anna**
+- **Lucas da Silva Gonçalves**
 
-As telas de login e cadastro do Hemo Click haviam sido primeiramente projetadas para uma aplicação mobile, entretanto, ao revisitar a ideia proposta, decidimos seguir com a implementação das telas no formato Web devido a familiaridade dos integrantes com a tecnologia.
+### Protótipo 🖌️
 
-## Ambiente de desenvolvimento
+[Clique aqui para visitar.](https://www.figma.com/file/F4Y4xlyGj2p76RkSUNRNCz/Projeto-Integrador?type=design&node-id=0-2&mode=design)
 
-### Frontend
-- HTML
-- CSS
-- Javascript
 
-### Backend
-- Java (Springboot)
+### Stack Utilizada 🌐
 
-### Banco de dados
-- PostgreSQL
+- **Back-end:** Java e Spring Boot
+- **Front-end:** HTML, CSS e JavaScript
+- **Banco de Dados:** PostgreSQL
+- **Build e Execução:** Docker
 
-### Build e execução
-- Docker
+## POC
 
-## Executando o projeto
+Este entrega tem como objetivo realizar uma prova de conceito para testar o sistema de login e cadastro de usuários. A POC foi escolhida pelo time como uma etapa inicial para validar a viabilidade técnica e funcional do processo de autenticação e registro de usuários.
 
-Navege até a pasta /api e faça o build da aplicação backend a partir do comando maven:
+### Objetivos da POC 📝
 
-```sh
-mvn -U clean package
-```
+- Verificar a integridade e segurança do sistema de login.
+- Testar a funcionalidade de cadastro de novos usuários.
+- Avaliar a usabilidade e a experiência do usuário durante o processo de autenticação e registro.
 
-Como resultado, será criada uma pasta `target/` contendo o executável da aplicação que será posteriormente transferida para o container do docker
+### Metodologia 🔄
 
-No diretório root do projeto, execute o comando
+A POC será conduzida em um ambiente controlado, onde os casos de teste serão executados em diferentes cenários para identificar possíveis falhas e limitações do sistema. Serão utilizadas técnicas de teste de software e monitoramento para registrar o desempenho e comportamento do sistema durante os testes.
 
-```sh
-docker-compose up
-```
+### Resultados Esperados 📦
 
-Espere o tempo de execução do build (pode levar alguns minutos na primeira execução). Após a etapa de build e inicialização do projeto, você poderá visualizar as telas a partir do endereço `http://localhost:8080/login` e `http://localhost:8080/cadastro`. Certifique-se que as portas `8080`; `8081` e `5432` da sua máquina estão disponíveis, pois o projeto está configurado para utilizar essas portas como entrada do frontend, backend e banco de dados respectivamente.
+Espera-se que a POC forneça insights valiosos sobre a robustez e eficácia do sistema de login e cadastro de usuários. Com base nos resultados obtidos, o time poderá tomar decisões informadas sobre os próximos passos do projeto, incluindo ajustes, melhorias e implementações adicionais.
 
-Ao fim das execuções, rodar o comando para desativar os containeres:
+## Instruções para Execução
 
-```sh
-docker-compose down
-```
+1. Clone o Repositório:
 
-Para que qualquer alteração no frontend reflita no container, é necessário rodar o comando:
+   ```sh  
+   git clone https://github.com/JuliaMdeS/projeto-integrador-mobile-web-grupo27.git 
+   ```
 
-```
-docker-compose up --build
-```
+2. Navege até a pasta /api e faça o build da aplicação backend a partir do comando maven:
 
+    ```sh
+    mvn -U clean install
+    ```
+
+3. Instale o Docker: Certifique-se de ter o Docker instalado em sua máquina. Você pode encontrar instruções de instalação [clicando aqui.](https://www.docker.com/products/docker-desktop/)
+
+
+4. Rode o Comando Docker Compose: No diretório raiz do projeto, execute o seguinte comando:
+
+    ```sh
+    docker-compose up  
+    ```
+
+    Este comando irá construir e iniciar os contêineres Docker para o front-end e back-end da aplicação, juntamente com o banco de dados.
+
+5. Acesse o Front-end: Abra seu navegador e acesse a seguinte URL:
+
+    ```arduino
+    http://localhost:8080/login/
+    ```
+
+    Isso abrirá a interface do usuário do front-end da aplicação.
+
+6. Acesse o Back-end: Para acessar o back-end da aplicação, utilize a seguinte URL:
+
+    ```arduino
+    http://localhost:8081  
+    ```
+
+    Isso permitirá que você interaja com a API fornecida pelo back-end.
+
+7. Para que qualquer alteração reflita no container, é necessário rodar o comando:
+
+    ```sh
+    docker-compose up --build
+    ```
+
+8. Considerações Finais: Certifique-se que as portas 8080; 8081 e 5432 da sua máquina estão disponíveis, pois o projeto está configurado para utilizar essas portas como entrada do frontend, backend e banco de dados respectivamente.
