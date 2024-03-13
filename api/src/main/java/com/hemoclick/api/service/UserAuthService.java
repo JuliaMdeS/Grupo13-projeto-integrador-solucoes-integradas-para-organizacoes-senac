@@ -11,6 +11,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 @RequiredArgsConstructor
 public class UserAuthService implements UserDetailsService {
@@ -31,7 +33,7 @@ public class UserAuthService implements UserDetailsService {
         return userAuthRepository.findByUsername(username);
     }
 
-    public Usuario buscarUsuario(Long id) {
-        return userAuthRepository.getReferenceById(id);
+    public Optional<Usuario> buscarUsuario(Long id) {
+        return userAuthRepository.findById(id);
     }
 }

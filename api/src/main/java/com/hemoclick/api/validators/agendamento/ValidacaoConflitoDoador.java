@@ -1,11 +1,10 @@
-package com.hemoclick.api.validators;
+package com.hemoclick.api.validators.agendamento;
 
 import com.hemoclick.api.dto.agendamento.AgendamentoDTO;
 import com.hemoclick.api.repository.AgendamentoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Component

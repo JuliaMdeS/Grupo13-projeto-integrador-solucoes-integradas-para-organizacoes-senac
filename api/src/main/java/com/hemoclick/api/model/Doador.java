@@ -4,6 +4,7 @@ import com.hemoclick.api.dto.doador.RequestDoadorDTO;
 import com.hemoclick.api.dto.doador.UpdateDoadorDTO;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -12,6 +13,7 @@ import java.util.Date;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 @Entity
 @Table(name = "doadores")
 public class Doador {
@@ -31,17 +33,6 @@ public class Doador {
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "usuarios_id")
     private Usuario usuario;
-
-    public Doador(RequestDoadorDTO dto) {
-        this.nome = dto.nome();
-        this.cpf = dto.cpf();
-        this.dataNascimento = dto.dataNascimento();
-        this.sexo = dto.sexo();
-        this.endereco = dto.endereco();
-        this.cep = dto.cep();
-        this.telefone = dto.telefone();
-        this.fichaMedica = new FichaMedica(dto.fichaMedica());
-    }
 
     public void update(UpdateDoadorDTO dto) {
         if (dto.cep() != null) this.cep = dto.cep();
