@@ -126,7 +126,8 @@
                 var locationHeader = xhr.getResponseHeader('Location');
                 console.log("Created user location: ", locationHeader);
                 var idUsuario = locationHeader.split('/').pop();
-                loginUser(idUsuario, registerData);
+                var tokenJWT = loginUser(registerData);
+                createDonor(tokenJWT, idUsuario, registerData);
             },
             error: function(error) {
                 console.error("Registration failed", error);
@@ -134,7 +135,7 @@
         });
     });
 
-    function loginUser(idUsuario, registerData) {
+    function loginUser(registerData) {
         $.ajax({
             url: 'http://localhost:8081/api/user/login',
             type: 'POST',
@@ -142,8 +143,7 @@
             contentType: "application/json",
             success: function(response) {
                 console.log("Logged in successfully");
-                var tokenJWT = response.tokenJWT;
-                createDonor(tokenJWT, idUsuario, registerData);
+                return  response.tokenJWT;
             },
             error: function(error) {
                 console.error("Login failed", error);
