@@ -1,4 +1,4 @@
-package com.hemoclick.api.validators;
+package com.hemoclick.api.validators.agendamento;
 
 import com.hemoclick.api.dto.agendamento.AgendamentoDTO;
 

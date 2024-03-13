@@ -1,9 +1,9 @@
 package com.hemoclick.api.model;
 
-import com.hemoclick.api.dto.doador.FichaMedicaDTO;
 import com.hemoclick.api.dto.doador.UpdateFichaMedicaDTO;
 import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -12,6 +12,7 @@ import java.util.Date;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 @Embeddable
 public class FichaMedica {
     private Double peso;
@@ -19,14 +20,6 @@ public class FichaMedica {
     private Boolean possuiTatuagens;
     private Date ultimaDoacao;
     private String doencasPreexistentes;
-
-    public FichaMedica(FichaMedicaDTO dto) {
-        this.peso = dto.peso();
-        this.tipoSanguineo = dto.tipoSanguineo();
-        this.possuiTatuagens = dto.possuiTatuagens();
-        this.ultimaDoacao = dto.ultimaDoacao();
-        this.doencasPreexistentes = dto.doencasPreexistentes();
-    }
 
     public void update(UpdateFichaMedicaDTO dto) {
         if (dto.peso() != null) this.peso = dto.peso();
