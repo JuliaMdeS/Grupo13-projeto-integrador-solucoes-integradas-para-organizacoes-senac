@@ -1,6 +1,4 @@
-<p align="center" style="font-size:24px;">
-  <b>Projeto Integrador - Grupo 27 - Hemoclick 🩸</b>
-</p>
+# Projeto Integrador - Hemoclick 🩸
 
 ## Descrição
 
@@ -68,13 +66,12 @@ Espera-se que a POC forneça insights valiosos sobre a robustez e eficácia do s
 
     Este comando irá construir e iniciar os contêineres Docker para o front-end e back-end da aplicação, juntamente com o banco de dados.
 
+
 5. Acesse o Front-end: Abra seu navegador e acesse a seguinte URL:
 
     ```arduino
     http://localhost:8080/login/
     ```
-
-    Isso abrirá a interface do usuário do front-end da aplicação.
 
 6. Acesse o Back-end: Para acessar o back-end da aplicação, utilize a seguinte URL:
 
@@ -82,12 +79,16 @@ Espera-se que a POC forneça insights valiosos sobre a robustez e eficácia do s
     http://localhost:8081  
     ```
 
-    Isso permitirá que você interaja com a API fornecida pelo back-end.
+7. Acessa a documentação no Swagger: Para acessar a documentação da aplicação, utilize a seguinte URL:
 
-7. Para que qualquer alteração reflita no container, é necessário rodar o comando:
+    ```arduino
+    http://localhost:8081/swagger-ui.html
+    ```
+
+8. Para que qualquer alteração reflita no container, é necessário rodar o comando:
 
     ```sh
     docker-compose up --build
     ```
 
-8. Considerações Finais: Certifique-se que as portas 8080; 8081 e 5432 da sua máquina estão disponíveis, pois o projeto está configurado para utilizar essas portas como entrada do frontend, backend e banco de dados respectivamente.
+9. Considerações Finais: Certifique-se que as portas 8080; 8081 e 5432 da sua máquina estão disponíveis, pois o projeto está configurado para utilizar essas portas como entrada do frontend, backend e banco de dados respectivamente.

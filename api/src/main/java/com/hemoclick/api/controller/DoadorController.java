@@ -4,9 +4,11 @@ import com.hemoclick.api.dto.doador.RequestDoadorDTO;
 import com.hemoclick.api.dto.doador.ResponseDoadorDTO;
 import com.hemoclick.api.dto.doador.UpdateDoadorDTO;
 import com.hemoclick.api.service.DoadorService;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springdoc.core.annotations.ParameterObject;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
@@ -17,6 +19,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 @RestController
 @RequestMapping("/api/doador")
+@SecurityRequirement(name = "bearer-key")
 @RequiredArgsConstructor
 public class DoadorController {
 
@@ -36,7 +39,7 @@ public class DoadorController {
     }
 
     @GetMapping
-    protected ResponseEntity<Page<ResponseDoadorDTO>> list(@PageableDefault(size = 10, sort = {"nome"}) Pageable pageable) {
+    protected ResponseEntity<Page<ResponseDoadorDTO>> list(@ParameterObject @PageableDefault(size = 10, sort = {"nome"}) Pageable pageable) {
         var page = doadorService.buscarTodosDoadores(pageable);
         return ResponseEntity.ok(page);
     }
