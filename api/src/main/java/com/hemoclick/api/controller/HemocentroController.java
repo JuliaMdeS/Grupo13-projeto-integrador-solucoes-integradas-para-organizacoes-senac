@@ -7,9 +7,11 @@ import com.hemoclick.api.dto.hemocentro.RequestHemocentroDTO;
 import com.hemoclick.api.dto.hemocentro.ResponseHemocentroDTO;
 import com.hemoclick.api.dto.hemocentro.UpdateHemocentroDTO;
 import com.hemoclick.api.service.HemocentroService;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springdoc.core.annotations.ParameterObject;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
@@ -20,6 +22,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 @RestController
 @RequestMapping("/api/hemocentro")
+@SecurityRequirement(name = "bearer-key")
 @RequiredArgsConstructor
 public class HemocentroController {
 
@@ -39,7 +42,7 @@ public class HemocentroController {
     }
 
     @GetMapping
-    protected ResponseEntity<Page<ResponseHemocentroDTO>> list(@PageableDefault(size = 10, sort = {"nome"}) Pageable pageable) {
+    protected ResponseEntity<Page<ResponseHemocentroDTO>> list(@ParameterObject @PageableDefault(size = 10, sort = {"nome"}) Pageable pageable) {
         var page = hemocentroService.buscarTodosHemocentros(pageable);
         return ResponseEntity.ok(page);
     }

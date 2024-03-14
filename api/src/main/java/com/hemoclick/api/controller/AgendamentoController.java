@@ -4,9 +4,11 @@ import com.hemoclick.api.dto.agendamento.AgendamentoDTO;
 import com.hemoclick.api.dto.doador.ResponseDoadorDTO;
 import com.hemoclick.api.dto.hemocentro.ResponseHemocentroDTO;
 import com.hemoclick.api.service.AgendamentoService;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springdoc.core.annotations.ParameterObject;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
@@ -17,6 +19,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 @RestController
 @RequestMapping("/api/agendamento")
+@SecurityRequirement(name = "bearer-key")
 @RequiredArgsConstructor
 public class AgendamentoController {
 
@@ -30,7 +33,7 @@ public class AgendamentoController {
     }
 
     @GetMapping
-    protected ResponseEntity<Page<AgendamentoDTO>> list(@PageableDefault(size = 10, sort = {"data"}) Pageable pageable) {
+    protected ResponseEntity<Page<AgendamentoDTO>> list(@ParameterObject @PageableDefault(size = 10, sort = {"data"}) Pageable pageable) {
         var page = agendamentoService.buscarTodosAgendamentos(pageable);
         return ResponseEntity.ok(page);
     }
