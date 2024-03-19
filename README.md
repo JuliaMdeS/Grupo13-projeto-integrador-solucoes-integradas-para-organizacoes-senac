@@ -41,6 +41,14 @@ A POC será conduzida em um ambiente controlado, onde os casos de teste serão e
 
 Espera-se que a POC forneça insights valiosos sobre a robustez e eficácia do sistema de login e cadastro de usuários. Com base nos resultados obtidos, o time poderá tomar decisões informadas sobre os próximos passos do projeto, incluindo ajustes, melhorias e implementações adicionais.
 
+### Apresentando o projeto concluído:
+
+https://github.com/JuliaMdeS/projeto-integrador-mobile-web-grupo27/assets/123558286/c8df8bdd-82a2-4966-955a-cb16a4e2e234
+
+## Assista no YouTube:
+
+[Clique aqui para assistir.](https://youtu.be/ZOJ_lZtjPV8)
+
 ## Instruções para Execução
 
 1. Clone o Repositório:
