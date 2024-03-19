@@ -82,6 +82,9 @@
                 contentType: "application/json",
                 success: function (response) {
                     console.log("Logged in successfully");
+                    var tokenJWT = response.tokenJWT;
+                    sessionStorage.setItem('jwtToken', tokenJWT);
+                    window.location.href = 'http://localhost:8080/usuario/';
                     return response.tokenJWT;
                 },
                 error: function (error) {
