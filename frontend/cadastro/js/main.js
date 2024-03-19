@@ -171,6 +171,8 @@
             },
             success: function(response) {
                 console.log("Donor created successfully", response);
+                sessionStorage.setItem('jwtToken', tokenJWT);
+                window.location.href = 'http://localhost:8080/login/';
             },
             error: function(error) {
                 console.error("Failed to create donor", error);
