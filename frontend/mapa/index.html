@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>HemoClick - Busca de Locais de Doação</title>
+    <title>HemoClick - Agendamento de Coleta</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--===============================================================================================-->    
@@ -35,32 +35,49 @@
                 <form class="login100-form validate-form">
                     <center><img src="images/logo.png" width="100px"></center>                  
                     <span class="login100-form-title p-b-49">
-                        Locais de Doação
+                        Agendamento de Coleta
                     </span>
 
+                    <!-- Dados Pessoais -->
                     <div class="wrap-input100 validate-input m-b-23">
-                        <span class="label-input100">CEP:</span>
-                        <input class="input100" type="text" name="distance" placeholder="Informe o CEP">
+                        <span class="label-input100">Nome Completo:</span>
+                        <input class="input100" type="text" name="name" placeholder="Digite seu nome completo">
                     </div>
 
-                    
-                    <div class="container-login100-form-btn">
-                      <div class="wrap-login100-form-btn">
-                        <div class="login100-form-bgbtn"></div>
-                        <button class="login100-form-btn">
-                            Buscar
-                        </button>
+                    <div class="wrap-input100 validate-input m-b-23">
+                        <span class="label-input100">E-mail:</span>
+                        <input class="input100" type="email" name="email" placeholder="Digite seu e-mail">
                     </div>
-                                       
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.191958167213!2d-46.646316825640376!3d-23.597447662917034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5a264d6b6611%3A0xae18ff6a2797997b!2sHospital%20S%C3%A3o%20Paulo!5e0!3m2!1spt-BR!2sbr!4v1710465017706!5m2!1spt-BR!2sbr" width="900" height="450" style="border: 5px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-                    
+                    <div class="wrap-input100 validate-input m-b-23">
+                        <span class="label-input100">Telefone:</span>
+                        <input class="input100" type="text" name="phone" placeholder="Digite seu telefone">
+                    </div>
+
+                    <!-- Detalhes do Agendamento -->
+                    <div class="wrap-input100 validate-input m-b-23">
+                        <span class="label-input100">Data e Hora:</span>
+                        <input class="input100" type="datetime-local" name="appointment_date">
+                    </div>
+
+                    <div class="wrap-input100 validate-input m-b-23">
+                        <span class="label-input100">Hospital:</span>
+                        <select class="input100" name="hospital">
+                            <option value="hospital1">Hospital São Paulo</option>
+                            <option value="hospital2">Hospital das Clínicas</option>
+                            <option value="hospital3">Hospital Santa Catarina</option>
+                            <!-- Adicione mais hospitais conforme necessário -->
+                        </select>
+                    </div>
+
+                    <!-- Botão de Agendar -->
                     <div class="container-login100-form-btn">
-                      <div class="wrap-login100-form-btn">
-                        <div class="login100-form-bgbtn"></div>
-                        <button class="login100-form-btn">
-                            Agendar
-                        </button>
+                        <div class="wrap-login100-form-btn">
+                            <div class="login100-form-bgbtn"></div>
+                            <button class="login100-form-btn">
+                                Confirmar Agendamento
+                            </button>
+                        </div>
                     </div>
                 </form>
             </div>
@@ -86,20 +103,5 @@
     <!--===============================================================================================-->
     <script src="js/main.js"></script>
     <!--===============================================================================================-->
-    <!-- Google Maps API -->
-    
-    <script>
-        function initMap() {
-            // Coordenadas do centro do mapa
-            var center = { lat: -23.5505, lng: -46.6333 };
-            // Opções do mapa
-            var mapOptions = {
-                zoom: 12,
-                center: center
-            };
-            // Novo mapa
-            var map = new google.maps.Map(document.getElementById('map'), mapOptions);
-        }
-    </script>
 </body>
 </html>
