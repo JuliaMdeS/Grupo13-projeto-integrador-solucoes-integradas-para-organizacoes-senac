@@ -23,11 +23,11 @@ Hemoclick é uma aplicação com objetivo principal de criar uma comunidade cone
 - **Banco de Dados:** PostgreSQL
 - **Build e Execução:** Docker
 
-## POC
+## MVP
 
-Este entrega tem como objetivo realizar uma prova de conceito para testar o sistema de login e cadastro de usuários. A POC foi escolhida pelo time como uma etapa inicial para validar a viabilidade técnica e funcional do processo de autenticação e registro de usuários.
+Este entrega tem como objetivo um produto mínimo viável (MVP) para o sistema de login e cadastro de usuários. As funcionalidades escolhidas pelo time fazem parte da etapa inicial para validar a viabilidade técnica e funcional do processo de autenticação e registro de usuários.
 
-### Objetivos da POC 📝
+### Objetivos do MVP 📝
 
 - Verificar a integridade e segurança do sistema de login.
 - Testar a funcionalidade de cadastro de novos usuários.
@@ -35,30 +35,18 @@ Este entrega tem como objetivo realizar uma prova de conceito para testar o sist
 
 ### Metodologia 🔄
 
-A POC será conduzida em um ambiente controlado, onde os casos de teste serão executados em diferentes cenários para identificar possíveis falhas e limitações do sistema. Serão utilizadas técnicas de teste de software e monitoramento para registrar o desempenho e comportamento do sistema durante os testes.
+A execução do sistema será conduzida em um ambiente controlado, onde os casos de teste serão executados em diferentes cenários para identificar possíveis falhas e limitações do sistema. Serão utilizadas técnicas de teste de software e monitoramento para registrar o desempenho e comportamento do sistema durante os testes.
 
 ### Resultados Esperados 📦
 
-Espera-se que a POC forneça insights valiosos sobre a robustez e eficácia do sistema de login e cadastro de usuários. Com base nos resultados obtidos, o time poderá tomar decisões informadas sobre os próximos passos do projeto, incluindo ajustes, melhorias e implementações adicionais.
-
-### Apresentando o projeto concluído:
-
-https://github.com/JuliaMdeS/projeto-integrador-mobile-web-grupo27/assets/123558286/c8df8bdd-82a2-4966-955a-cb16a4e2e234
-
-## Assista no YouTube:
-
-[Clique aqui para assistir.](https://youtu.be/ZOJ_lZtjPV8)
-
-## Apresentação com Frontend + Backend:
-
-[Clique aqui para assistir.](https://youtu.be/MloljKJ2J2s)
+Espera-se que o desenvolvimento do MVP forneça insights valiosos sobre a robustez e eficácia do sistema de login e cadastro de usuários. Com base nos resultados obtidos, o time poderá tomar decisões informadas sobre os próximos passos do projeto, incluindo ajustes, melhorias e implementações adicionais.
 
 ## Instruções para Execução
 
 1. Clone o Repositório:
 
    ```sh  
-   git clone https://github.com/JuliaMdeS/projeto-integrador-mobile-web-grupo27.git 
+   git clone git@github.com:JuliaMdeS/Grupo13-projeto-integrador-solucoes-integradas-para-organizacoes-senac.git
    ```
 
 2. Navege até a pasta /api e faça o build da aplicação backend a partir do comando maven:
@@ -103,4 +91,4 @@ https://github.com/JuliaMdeS/projeto-integrador-mobile-web-grupo27/assets/123558
     docker-compose up --build
     ```
 
-9. Considerações Finais: Certifique-se que as portas 8080; 8081 e 5432 da sua máquina estão disponíveis, pois o projeto está configurado para utilizar essas portas como entrada do frontend, backend e banco de dados respectivamente.
+9. Atenção: Certifique-se que as portas 8080; 8081 e 5432 da sua máquina estão disponíveis, pois o projeto está configurado para utilizar essas portas como entrada do frontend, backend e banco de dados respectivamente.
