@@ -101,9 +101,9 @@ function initMap() {
             }
     
             var requestData = {
-                userId: 1,
-                hospitalId: hospitalId,
-                appointmentDate: appointmentDate
+                idDoador: 1,
+                idHemocentro: hospitalId,
+                data: appointmentDate
             };
     
             $.ajax({
