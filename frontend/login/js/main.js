@@ -84,7 +84,7 @@
                     console.log("Logged in successfully");
                     var tokenJWT = response.tokenJWT;
                     sessionStorage.setItem('jwtToken', tokenJWT);
-                    window.location.href = 'http://localhost:8080/usuario/';
+                    window.location.href = 'http://localhost:8080/agendamento/';
                     return response.tokenJWT;
                 },
                 error: function (error) {
