@@ -91,28 +91,35 @@ function initMap() {
     $(document).ready(function () {
 
         $("#confirm-schedule").click(function () {
+            event.preventDefault(); // Impede o envio automático do formulário
+
             var hospitalId = $("#hospital-select").val();
             var appointmentDate = $("input[name='appointment_date']").val();
-    
-            // Validação dos campos
+            var userId = sessionStorage.getItem('userId');
+            var tokenJWT = sessionStorage.getItem('tokenJWT');
+
             if (!hospitalId || !appointmentDate) {
                 alert("Por favor, selecione um hospital e uma data válida.");
                 return;
             }
     
-            var requestData = {
-                idDoador: 1,
-                idHemocentro: hospitalId,
-                data: appointmentDate
-            };
-    
             $.ajax({
                 url: 'http://localhost:8081/api/agendamento',
                 type: 'POST',
                 contentType: "application/json",
-                data: JSON.stringify(requestData),
+                data: JSON.stringify({
+                    idDoador: userId,
+                    idHemocentro: hospitalId,
+                    data: appointmentDate
+                }),
+                headers: {
+                    "Authorization": "Bearer " + tokenJWT
+                },
                 success: function (response) {
                     alert("Agendamento realizado com sucesso!");
+                        setTimeout(function() {
+                        location.reload(); 
+                    }, 5000);
                 },
                 error: function (error) {
                     console.error("Erro ao realizar o agendamento", error);
@@ -123,6 +130,8 @@ function initMap() {
 
 
         $("#hospital-select").click(function () {
+            var tokenJWT = sessionStorage.getItem('tokenJWT');
+
             if ($("#hospital-select option").length > 1) {
                 return;
             }
@@ -131,6 +140,9 @@ function initMap() {
                 url: 'http://localhost:8081/api/hemocentro',
                 type: 'GET',
                 contentType: "application/json",
+                headers: {
+                    "Authorization": "Bearer " + tokenJWT
+                },
                 success: function (response) {
                     var hospitals = response.content;
 

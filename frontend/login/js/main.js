@@ -83,7 +83,9 @@
                 success: function (response) {
                     console.log("Logged in successfully");
                     var tokenJWT = response.tokenJWT;
-                    sessionStorage.setItem('jwtToken', tokenJWT);
+                    var userId = response.userId;
+                    sessionStorage.setItem('tokenJWT', tokenJWT);
+                    sessionStorage.setItem('userId', userId);
                     window.location.href = 'http://localhost:8080/agendamento/';
                     return response.tokenJWT;
                 },

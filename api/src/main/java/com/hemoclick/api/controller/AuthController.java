@@ -35,9 +35,10 @@ public class AuthController {
 
     @PostMapping("/login")
     protected ResponseEntity<TokenDTO> login(@RequestBody @Valid AuthDTO dto) {
-        var authenticationToken = new UsernamePasswordAuthenticationToken(dto.username(),dto.password());
+        var authenticationToken = new UsernamePasswordAuthenticationToken(dto.username(), dto.password());
         var authentication = manager.authenticate(authenticationToken);
-        var jwtToken = jwtService.generateToken((Usuario) authentication.getPrincipal());
-        return ResponseEntity.ok(new TokenDTO(jwtToken));
+        var user = (Usuario) authentication.getPrincipal();
+        var jwtToken = jwtService.generateToken(user);
+        return ResponseEntity.ok(new TokenDTO(jwtToken, user.getId()));
     }
 }
