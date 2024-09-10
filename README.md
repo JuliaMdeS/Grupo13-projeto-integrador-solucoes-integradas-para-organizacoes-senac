@@ -25,13 +25,16 @@ Hemoclick é uma aplicação com objetivo principal de criar uma comunidade cone
 
 ## MVP
 
-Este entrega tem como objetivo um produto mínimo viável (MVP) para o sistema de login e cadastro de usuários. As funcionalidades escolhidas pelo time fazem parte da etapa inicial para validar a viabilidade técnica e funcional do processo de autenticação e registro de usuários.
+Este entrega tem como objetivo um produto mínimo viável (MVP) para o sistema de login e cadastro de usuários. As funcionalidades escolhidas pelo time fazem parte da etapa inicial para validar a viabilidade técnica e funcional do processo de autenticação e registro de usuários, além do agendamento de docações.
+
+https://github.com/user-attachments/assets/8e1b5030-b574-46dc-8958-26609b1b99fb
 
 ### Objetivos do MVP 📝
 
 - Verificar a integridade e segurança do sistema de login.
 - Testar a funcionalidade de cadastro de novos usuários.
 - Avaliar a usabilidade e a experiência do usuário durante o processo de autenticação e registro.
+- Validar lógica de agendamento de doações.
 
 ### Metodologia 🔄
 
